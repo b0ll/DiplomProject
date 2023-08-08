@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Diplom1
+{
+    public partial class Sotrudniki : Form
+    {
+        public Sotrudniki()
+        {
+            InitializeComponent();
+        }
+
+        private void Sotrudniki_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            AdmMenu am = new AdmMenu();
+            this.Hide();
+            am.ShowDialog();
+        }
+
+        public void Sotr_Data()
+        {
+            Sotr_data data = new Sotr_data();
+            data.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Sotr_addDel sa = new Sotr_addDel();
+            sa.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Sotr_Data();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Sotr_List sl = new Sotr_List();
+            sl.ShowDialog();
+        }
+    }
+}
